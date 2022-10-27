@@ -29,7 +29,7 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => {
     });
 });
 
-router.update('/dashboard/update', ensureAuthenticated, (req, res) => {
+router.post('/dashboard/update', ensureAuthenticated, (req, res) => {
     let { first_name,
         last_name,
         email,
