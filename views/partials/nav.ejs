@@ -1,21 +1,30 @@
 <!-- navigation bar -->
 <div class="blue-back">
     <div class="main">
-        <div class="navbar">
+        <div class="navbar" style="justify-content: space-evenly;">
             <a href="/">
                 <div class="logo"><b>Simple</b></div>
             </a>
-            <div class="menu">
-                <ul>
-                    <li><a href="/about-me">About Me</a></li>
-                    <li><a href="/contact-me">Contact Me</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/services">Services</a></li>
 
-                    <span>&nbsp;&nbsp;</span>
-                </ul>
-            </div>
+
+            <% if(user) { %>
+                <a href="/login" class="gradient-button btn"
+                    style="margin: 15px 15px; justify-self: end;"><b>Logout</b></a>
+                <% } else { %>
+                    <div class="menu" style="width: fit-content">
+                        <ul>
+                            <li><a href="/about-me">About Me</a></li>
+                            <li><a href="/contact-me">Contact Me</a></li>
+                            <li><a href="/projects">Projects</a></li>
+                            <li><a href="/services">Services</a></li>
+
+                        </ul>
+                    </div>
+
+                    <a href="/login" class="gradient-button btn"
+                        style="margin: 15px 15px; justify-self: end;"><b>Login</b></a>
+
+                    <% } %>
         </div>
-
     </div>
 </div>
