@@ -10,27 +10,23 @@ const {
 
 /* GET home page. */
 router.get('/', forwardAuthenticated, function (req, res, next) {
-  User.find({}, (user) => {
-    console.log(user);
-  })
-
-  res.render('index', { page_title: 'Home' });
+  res.render('index', { page_title: 'Home', user: req.user, });
 });
 /* GET home page. */
 router.get('/about-me', forwardAuthenticated, function (req, res, next) {
-  res.render('about-me', { page_title: 'About Me' });
+  res.render('about-me', { page_title: 'About Me', user: req.user, });
 });
 /* GET home page. */
 router.get('/projects', forwardAuthenticated, function (req, res, next) {
-  res.render('projects', { page_title: 'Projects' });
+  res.render('projects', { page_title: 'Projects', user: req.user, });
 });
 /* GET home page. */
 router.get('/services', forwardAuthenticated, function (req, res, next) {
-  res.render('services', { page_title: 'Services' });
+  res.render('services', { page_title: 'Services', user: req.user, });
 });
 /* GET home page. */
 router.get('/contact-me', forwardAuthenticated, function (req, res, next) {
-  res.render('contact-me', { page_title: 'Contact Me' });
+  res.render('contact-me', { page_title: 'Contact Me', user: req.user, });
 });
 /* GET home page. */
 router.post('/contact-me', function (req, res, next) {

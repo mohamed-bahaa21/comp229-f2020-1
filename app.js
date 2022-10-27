@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dotenv.config({silent: true});
+dotenv.config({ silent: true });
 // if (env.error) throw env.error;
 
 var createError = require('http-errors');
@@ -9,6 +9,8 @@ var cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
 var logger = require('morgan');
+const csrf = require('csurf');
+const csrfProtection = csrf();
 
 const mongoose = require('mongoose');
 const passport = require('passport');
@@ -43,6 +45,13 @@ app.use(
     resave: true,
     saveUninitialized: true
   })
+);
+app.use(
+  csrfProtection,
+  (req, res, next) => {
+    res.locals.csrfToken = req.csrfToken();
+    next();
+  }
 );
 
 // Passport middleware
