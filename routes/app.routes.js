@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const User = require('../models/User.model');
+const Contact = require('../models/Contact.model');
 
 const {
   ensureAuthenticated,
@@ -34,13 +35,15 @@ router.post('/contact-me', function (req, res, next) {
     first_name,
     last_name,
     email,
-    password } = req.body;
+    phone_number,
+    message } = req.body;
 
   const newContact = new Contact({
     first_name,
     last_name,
     email,
-    password,
+    phone_number,
+    message
   });
 
   newContact

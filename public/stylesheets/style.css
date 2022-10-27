@@ -228,6 +228,7 @@ input {
 }
 
 .modal-window>div {
+    width: 75%;
     position: absolute;
     top: 45vh;
     left: 50%;

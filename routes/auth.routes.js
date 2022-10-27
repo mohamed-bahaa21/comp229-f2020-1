@@ -60,6 +60,21 @@ router.post('/dashboard/update', ensureAuthenticated, (req, res) => {
     });
 });
 
+// Delete Student
+router.post('/dashboard/delete', (req, res) => {
+    Contact.findByIdAndRemove(req.body.userId, (err, doc) => {
+        if (!err) {
+            req.flash(
+                'success_msg',
+                'Contact ' + doc.name + ': has been successfully deleted.'
+            );
+            res.redirect('/dashboard');
+        } else {
+            console.log('Error in deleting contact :' + err);
+        }
+    });
+});
+
 
 /* POST login page. */
 router.post('/login', (req, res, next) => {

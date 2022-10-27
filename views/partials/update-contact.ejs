@@ -1,0 +1,26 @@
+<div id="get-early-access" class="modal-window">
+    <div>
+        <a href="#" title="Close" class="modal-close" style="font-size: 1.2rem;">X</a>
+        <h5>Before you go, a small question</h5>
+        <span>Are sure you want change this data ?</span>
+        <br><br>
+
+
+        <div class="text-center">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+            <input type="text" class="emailbar shadow-lg" name="first_name" placeholder="Enter Your First Name"
+                required>
+            <input type="text" class="emailbar shadow-lg" name="last_name" placeholder="Enter Your Last Name" required>
+            <input type="number" class="emailbar shadow-lg" name="phone_number" placeholder="Enter Your Phone Number"
+                required>
+            <input type="email" class="emailbar shadow-lg" name="email" placeholder="Enter Your Email" required>
+            <textarea name="message" class="emailbar shadow-lg" cols="30" rows="10" placeholder="Enter Your Message"
+                required></textarea>
+            <br>
+            <input type="submit" value="Submit" class="btn-rounded shadow">
+        </div>
+
+
+    </div>
+</div>

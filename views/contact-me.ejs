@@ -2,25 +2,25 @@
     <%- include('./partials/nav.ejs') %>
 
         <div class="form-container" style="padding: 2rem 0;">
+            
             <form action="/contact-me" method="post">
-
-
                 <div class="text-center">
-
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                    <input type="text" class="emailbar shadow-lg" name="first_name" placeholder="Enter Your First Name">
-                    <input type="text" class="emailbar shadow-lg" name="last_name" placeholder="Enter Your Last Name">
+
+                    <input type="text" class="emailbar shadow-lg" name="first_name" placeholder="Enter Your First Name"
+                        required>
+                    <input type="text" class="emailbar shadow-lg" name="last_name" placeholder="Enter Your Last Name"
+                        required>
                     <input type="number" class="emailbar shadow-lg" name="phone_number"
-                        placeholder="Enter Your Phone Number">
-                    <input type="email" class="emailbar shadow-lg" name="email" placeholder="Enter Your Email">
+                        placeholder="Enter Your Phone Number" required>
+                    <input type="email" class="emailbar shadow-lg" name="email" placeholder="Enter Your Email" required>
                     <textarea name="message" class="emailbar shadow-lg" cols="30" rows="10"
-                        placeholder="Enter Your Message"></textarea>
+                        placeholder="Enter Your Message" required></textarea>
                     <br>
                     <input type="submit" value="Submit" class="btn-rounded shadow">
                 </div>
-
-
             </form>
+
         </div>
 
 
