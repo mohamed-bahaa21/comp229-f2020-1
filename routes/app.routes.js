@@ -1,9 +1,9 @@
-const path = require('path')
-const express = require('express')
-const router = express.Router()
+var express = require('express');
+var router = express.Router();
 
-const controller = require(path.resolve(__basename, 'controllers', 'app.controllers'))
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
-router.get('/', controller.getLanding)
-
-module.exports = router
+module.exports = router;
