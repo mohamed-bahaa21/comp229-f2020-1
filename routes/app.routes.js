@@ -2,9 +2,8 @@ const path = require('path')
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res, next) => {
-    res.send('hello')
-})
+const controller = require(path.resolve(__basename, 'controllers', 'app.controllers'))
 
+router.get('/', controller.getLanding)
 
 module.exports = router
