@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
-const env = dotenv.config({silent: true});
-if (env.error) throw env.error;
+dotenv.config({silent: true});
+// if (env.error) throw env.error;
 
 var createError = require('http-errors');
 var express = require('express');
