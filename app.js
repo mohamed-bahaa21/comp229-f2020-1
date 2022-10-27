@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-let env = dotenv.config({})
+const env = dotenv.config({silent: true});
 if (env.error) throw env.error;
 
 var createError = require('http-errors');
