@@ -1,6 +1,90 @@
 <%- include('./partials/head.ejs') %>
     <%- include('./partials/nav.ejs') %>
-        <h1>
-            <%= page_title %>
-        </h1>
+        <section id="section-2" style="background-color: #F6F8F8; color: #555">
+            <div class="container text-center">
+                <div class="text-center" style="margin: 1rem 0 3rem 0">
+                    <h1>We help you 👇</h1>
+                </div>
+                <div class="steps-container">
+                    <div class="card col-md-4 row" id="step-1">
+
+                        <div class="card-img shadow" style="font-size: 2.5rem;">
+                            <span>👨‍🏫</span>
+                        </div>
+
+                        <h3>Contact With Experts</h3>
+
+                        <div class="card-text">
+                            <h6>in Your Field</h6>
+                        </div>
+                        <br>
+
+                        <button class="expand" type="button" data-toggle="collapse" data-target="#collapse1"
+                            aria-expanded="false" aria-controls="collapse1" onclick=arrowShift(this)>Learn
+                            more!<br>˅</button>
+
+                        <div class="collapse" id="collapse1">
+                            <p style="text-align: left;">Join us now: <br>
+                                ✅ CMS Admin <span class="blue-text">Platform</span> <br>
+                                ✅ Customized <span class="blue-text">Designs</span> UI/UX <br>
+                                ✅ Comlpex <span class="blue-text">Case Studies</span> you won't need.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-4 row" id="step-2">
+                        <div class="card-img shadow" style="font-size: 2.5rem;">
+                            <span>🛠️</span>
+                        </div>
+                        <h3>Level-Up</h3>
+                        <div class="card-text">
+                            <h6>and Work on Real World <br>
+                                Projects</h6>
+
+                        </div>
+                        <button class="expand" type="button" data-toggle="collapse" data-target="#collapse2"
+                            aria-expanded="false" aria-controls="collapse2" onclick=arrowShift(this)>Learn
+                            more!<br>˅<br></button>
+
+                        <div class="collapse" id="collapse2">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing. <span class="blue-text">Lorem,
+                                    ipsum dolor.</span>, Lorem, ipsum.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing. <span class="blue-text">Lorem,
+                                    ipsum dolor.</span>, Lorem, ipsum.
+                                <br><br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ratione reiciend?
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="card col-md-4 row" id="step-3">
+                        <div class="card-img shadow" style="font-size: 2.5rem;">
+                            <span>🌟</span>
+                        </div>
+                        <h3>Show</h3>
+                        <div class="card-text">
+                            <h6>Your Future Employers<br>
+                                What they want to See</h6>
+                        </div>
+
+                        <button class="expand" type="button" data-toggle="collapse" data-target="#collapse3"
+                            aria-expanded="false" aria-controls="collapse3" onclick=arrowShift(this)>Learn
+                            more!<br>˅</button>
+
+                        <div class="collapse" id="collapse3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minima blanditiis
+                                officiis? <span class="gold-text">Real-world</span> Lorem.
+                                <br><br>
+                                Lorem, ipsum dolor. <span class="gold-text">Unicorn</span>.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
         <%- include('./partials/footer.ejs') %>

@@ -1,8 +1,528 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0px solid black;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
-a {
-  color: #00B7FF;
+html {
+    background-color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    font-family: 'Fira', sans-serif !important;
+}
+
+.blue-back {
+    background-color: #328DF6;
+}
+
+.blue-text {
+    color: #328DF6;
+}
+
+.gold-text {
+    color: #F0AD4E;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.dropdown-item {
+    font-size: 11px;
+    color: green;
+}
+
+.input {
+    background-color: #4DFFBB;
+    /* background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%); */
+    color: #555;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 17px;
+}
+
+.emailbar, textarea {
+    position: relative;
+    /* left: 4.25rem; */
+    margin: 0.5em auto;
+    padding: 1em;
+    border-radius: 1em;
+    width: 50%;
+}
+
+#earlyacc {
+    position: relative;
+    right: 4.25rem;
+    top: -2px;
+}
+
+input {
+    border-radius: 25px !important;
+    padding: 0.7rem 1rem !important;
+}
+
+.btn {
+    background-color: #4DFFBB;
+    /* background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%); */
+    color: #555;
+    padding: 1%;
+    margin: 0.5%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.expand {
+    background-color: transparent;
+    color: rgb(61, 126, 201);
+    font-size: 15px;
+}
+
+.btn-rounded {
+    background-color: #1de9b6;
+    /* background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%); */
+    color: #555;
+    padding: 1%;
+    margin: 0.5%;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+#heart {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Header + Navbar  */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: transparent;
+}
+
+.logo {
+    background-color: transparent;
+    color: white;
+    border-radius: 7px;
+    padding: 0rem 0.7rem;
+    font-family: "Fira Sans", "Sans";;
+    font-size: 1.25rem;
+}
+
+.menu {
+    color: #fff;
+    font-size: 15px;
+    padding: 1rem 0 0 0;
+}
+
+.menu>ul {
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+.menu>ul>li {
+    padding: 0rem 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown-menu {
+    padding: 1rem;
+}
+
+.dropdown-menu a {
+    margin: 5px;
+}
+
+/*  */
+
+.text-center {
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.main {
+    width: 100%;
+    /* background-color: #fc9842;
+    background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%); */
+    background: url("../imgs/Header/BG2.svg");
+    background-size: cover;
+}
+
+.main-content {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.form-container {
+    flex: 1;
+}
+
+.text {
+    flex: 1;
+}
+
+.banner {
+    flex: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+#link {
+    color: #1de9b6;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+/* Modal Window */
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 15px !important;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window>div {
+    position: absolute;
+    top: 45vh;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    color: #555;
+    text-align: center;
+}
+
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+.modal-window>div>form>input {
+    display: block;
+    margin: 2rem auto;
+    border-bottom: 2px solid #F0AD4E;
+    width: 75%;
+    border-radius: 25px;
+}
+
+.modal-window>div>form> :last-child {
+    width: auto;
+    border-radius: 25px;
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+/* section 1 ----------------------------------------------------------------------------------- */
+
+#section-2 {
+    padding: 2rem 0;
+    background: url("../imgs/3\ Easy\ Simple\ Steps!/Arrow.svg");
+    z-index: -10;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+.card {
+    height: 100%;
+    border: 0 solid;
+    padding: 1%;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px -30px #999;
+    display: table-cell;
+}
+
+.card-text {
+    color: #555;
+}
+
+.card-img {
+    position: relative;
+    width: 25%;
+    height: 50%;
+    border: 0 solid;
+    align-self: left;
+    padding: 0.5%;
+    border-radius: 8%;
+    background-color: white;
+    box-shadow: 0 20px 50px -30px white;
+    margin-bottom: -2rem;
+    right: -10px;
+    top: -50px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4C72E3;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* section 2 ---------------------------------------------------------------------------------- */
+
+#brands-section {
+    background-color: #f9f9fe;
+    padding: 2rem 0;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.brands-container img {
+    height: 50px;
+}
+
+/* -------------------------------------------------------------------- */
+
+footer {
+    background-color: #fff;
+    padding: 1rem 0;
+}
+
+.footer-logo img {
+    margin: 0rem 1rem;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link a {
+    font-size: 0.80rem;
+    color: #555;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+footer span {
+    font-size: 0.7rem;
+    color: #555;
+    font-weight: 700;
+}
+
+/* Screens */
+
+@media (max-width: 1000px) {
+    .steps-container {
+        display: block;
+        margin: 2rem 0;
+    }
+    .step-image-container {
+        display: block;
+        margin: 2rem 0;
+    }
+    #section-2 .card {
+        display: block;
+        max-width: 50%;
+        border: 0 solid;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px -30px #999;
+    }
+    #section-2 .card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 1rem 0 0 0;
+    }
+    #section-2 .card p {
+        font-size: 0.9rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+    #section-2 .card-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .modal-window>div {
+        width: 75%;
+    }
+    .brands-container {
+        display: block;
+        width: auto;
+    }
+    .brands-container img {
+        display: block;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .main-content {
+        display: block;
+        text-align: center;
+    }
+    #emailbar {
+        position: unset;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        padding: 7px;
+        border-radius: 5px;
+        width: 85%;
+    }
+    #earlyacc {
+        position: unset;
+        right: 0;
+        margin-top: 15px;
+    }
+    .main-content p b {
+        font-weight: normal;
+    }
+    #section-2 .card {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .main-content {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .main-content p {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .main-content {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .main-content p {
+        padding: 0 1.5rem;
+    }
+    .main-content p b {
+        font-weight: normal;
+    }
+    .navbar {
+        padding: 0 1rem;
+        display: block;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+    .menu {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    #emailbar {
+        width: 95%;
+    }
+    .modal-window>div {
+        min-width: 85%;
+        padding: 1.5rem 0.5rem;
+    }
+    .footer-link {
+        display: block;
+    }
+    .footer-link a {
+        display: block;
+        margin: 0.25rem 0;
+    }
 }

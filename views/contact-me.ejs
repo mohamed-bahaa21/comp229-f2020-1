@@ -1,6 +1,27 @@
 <%- include('./partials/head.ejs') %>
     <%- include('./partials/nav.ejs') %>
-        <h1>
-            <%= page_title %>
-        </h1>
+
+        <div class="form-container" style="padding: 2rem 0;">
+            <form action="/" method="post">
+
+
+                <div class="text-center">
+
+                    <input type="text" class="emailbar shadow-lg" name="first_name" placeholder="Enter Your First Name">
+                    <input type="text" class="emailbar shadow-lg" name="last_name" placeholder="Enter Your Last Name">
+                    <input type="number" class="emailbar shadow-lg" name="phone_number"
+                        placeholder="Enter Your Phone Number">
+                    <input type="email" class="emailbar shadow-lg" name="email" placeholder="Enter Your Email">
+                    <textarea name="message" class="emailbar shadow-lg" cols="30" rows="10"
+                        placeholder="Enter Your Message"></textarea>
+                    <br>
+                    <input type="submit" value="Submit" class="btn-rounded shadow">
+                </div>
+
+
+            </form>
+        </div>
+
+
+
         <%- include('./partials/footer.ejs') %>
