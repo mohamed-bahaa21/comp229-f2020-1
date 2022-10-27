@@ -1,3 +1,10 @@
+/*
+    File Name: passport.js
+    Student Name: Kristi Goxhaj
+    StudentID: 301147545
+    Date: 27/10/2022
+*/
+
 const LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');

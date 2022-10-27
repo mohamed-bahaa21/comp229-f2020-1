@@ -1,3 +1,10 @@
+/*
+    File Name: auth.routes.js
+    Student Name: Kristi Goxhaj
+    StudentID: 301147545
+    Date: 27/10/2022
+*/
+
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');

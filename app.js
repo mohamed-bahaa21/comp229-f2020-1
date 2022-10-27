@@ -1,3 +1,10 @@
+/*
+    File Name: app.js
+    Student Name: Kristi Goxhaj
+    StudentID: 301147545
+    Date: 27/10/2022
+*/
+
 const dotenv = require('dotenv');
 dotenv.config({ silent: true });
 // if (env.error) throw env.error;
